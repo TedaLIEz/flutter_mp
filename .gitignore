@@ -15,3 +15,4 @@ doc/api/
 *.idea
 
 .DS_Store
+examples/lakesMP
