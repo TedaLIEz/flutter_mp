@@ -7,15 +7,17 @@
  */
 
 import '../util/util.dart';
+import 'package:path/path.dart' as p;
+import 'dart:io';
 
 Future<String> generateMpJsCode() async {
-    var tempStr = await getTempString('component.js');
-    return tempStr;
+  var tempStr = await getTempString('component.js');
+  return tempStr;
 }
 
 Future<String> generateMpWxssCode() async {
-    var tempStr = await getTempString('component.wxss');
-    return tempStr;
+  var tempStr = await getTempString('component.wxss');
+  return tempStr;
 }
 
 //TODO 根据组件生成usingComponents， componentGenerics字段
@@ -30,6 +32,5 @@ const mpJsonCode = '''
 ''';
 
 String generateMpJsonCode() {
-    return mpJsonCode;
+  return mpJsonCode;
 }
-

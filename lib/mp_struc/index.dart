@@ -10,7 +10,7 @@ import 'dart:io';
 import 'package:path/path.dart' as p;
 
 import '../util/util.dart';
-
+@deprecated
 void generateFileFromFile(fileName, outputDic) async {
     var tempStr = await getTempString(fileName);
     var outPath = p.join(outputDic, fileName);
@@ -18,7 +18,7 @@ void generateFileFromFile(fileName, outputDic) async {
     new File(outPath)
         ..writeAsStringSync(tempStr);
 }
-
+@deprecated
 void generateMpStruc (String outputPath) async {
     await generateFileFromFile('app.js', outputPath);
     await generateFileFromFile('app.wxss', outputPath);
@@ -49,7 +49,7 @@ const appJsonStr = '''
 	}
 }
 ''';
-
+@deprecated
 void generateMpAppJson(String outputPath) {
     var appJsonPath = p.join(outputPath, 'app.json');
     new File(appJsonPath)

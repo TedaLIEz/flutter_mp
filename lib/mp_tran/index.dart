@@ -37,7 +37,6 @@ Map<String, String> mpTran(String code) {
     parser.enableSetLiterals = true;
 
     AstNode node = parser.parseCompilationUnit(startToken);
-
     var mpVisitor = MpVisitor();
     node.accept(mpVisitor);
 
